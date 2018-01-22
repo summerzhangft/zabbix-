@@ -23,7 +23,7 @@ def get_login():
     try:
         result = request.urlopen(req)
     except Exception as e:
-        print("Auth Failed, Please Check Your Name And Password:", e)
+        print(e)
     else:
         page = result.read().decode("utf-8")
         page = json.loads(page)
@@ -34,5 +34,8 @@ def get_auth():
         f.write(get_login().get("result"))
         f.close()
 
+def main():
+    get_auth()
 
-get_auth()
+if __name__ == "__main__":
+    main()
