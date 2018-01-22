@@ -41,14 +41,14 @@ def get_status(Group):
 def Tok_group(page):
     for group in page:
         group = page.get("result")[0].get("name")
-        return group
+        print(group)
 def Tok_ser(page):
         hosts = page.get("result")[0].get("hosts")
         for host in hosts:
             print(host["host"])
 
 def main():
-    print(Tok_group(get_status(Group)))
+    Tok_group(get_status(Group))
     Tok_ser(get_status(Group))
 #get_status(get_login())
 if __name__ == "__main__":
