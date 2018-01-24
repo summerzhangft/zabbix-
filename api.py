@@ -50,7 +50,7 @@ def Tok_ser(page):
 def main():
     Tok_group(get_status(Group))
     Tok_ser(get_status(Group))
-#get_status(get_login())
+
 if __name__ == "__main__":
     for Group in GA:
         main()
